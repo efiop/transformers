@@ -507,9 +507,11 @@ class WhisperGenerationMixin:
             logprob_threshold=logprob_threshold,
             generation_config=generation_config,
         )
+        print(f"OLOLO return_timestamps: {return_timestamps}")
         self._set_return_timestamps(
             return_timestamps=return_timestamps, is_shortform=is_shortform, generation_config=generation_config
         )
+        print(f"OLOLO generation_config.return_timestamps: {generation_config.return_timestamps}")
         self._set_language_and_task(
             language=language, task=task, is_multilingual=is_multilingual, generation_config=generation_config
         )
